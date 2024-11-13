@@ -6,8 +6,8 @@ import {
 import "./App.css";
 import AppLayout from "./ui/AppLayout";
 import { ThemeProvider } from "./contexts/theme-provider";
-import Dashboard from "./pages/dashboard";
-import City from "./pages/city";
+import Dashboard from "./pages/Dashboard";
+import City from "./pages/City";
 
 function App() {
   const router = createBrowserRouter([
