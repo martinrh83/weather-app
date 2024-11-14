@@ -7,6 +7,8 @@ import useWeather from "@/hooks/useWeather";
 import useForecast from "@/hooks/useForecast";
 import useReverseGeo from "@/hooks/useReverseGeocoding";
 import CurrentWeather from "@/ui/CurrentWeather";
+import HourlyTemperature from "@/ui/HourlyTemperature";
+import WeatherDetails from "@/ui/WeatherDetails";
 
 export default function Dashboard() {
   const {
@@ -111,8 +113,12 @@ export default function Dashboard() {
       </div>
 
       <div className="grid gap-6">
-        <div>
+        <div className="flex flex-col lg:flex-row gap-4">
           <CurrentWeather data={weather} locationName={reverseGeo[0]} />
+          <HourlyTemperature data={forecast} />
+        </div>
+        <div>
+          <WeatherDetails data={weather} />
         </div>
       </div>
     </div>
