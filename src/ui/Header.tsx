@@ -1,6 +1,7 @@
 import { useTheme } from "@/contexts/theme-provider";
 import { Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
+import CitySearch from "./CitySearch";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
@@ -16,7 +17,8 @@ export default function Header() {
           />
         </Link>
 
-        <div>
+        <div className="flex gap-4">
+          <CitySearch />
           <div
             onClick={() => setTheme(isDark ? "light" : "dark")}
             className={`flex items-center cursor-pointer transition-transform duration-500 ${
