@@ -2,6 +2,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import useForecast from "@/hooks/useForecast";
 import useWeather from "@/hooks/useWeather";
 import CurrentWeather from "@/ui/CurrentWeather";
+import FavoriteButton from "@/ui/FavoriteButton";
 import HourlyTemperature from "@/ui/HourlyTemperature";
 import WeatherDetails from "@/ui/WeatherDetails";
 import WeatherForecast from "@/ui/WeatherForecast";
@@ -51,7 +52,9 @@ export default function City() {
         <h1 className="text-3xl font-bold tracking-tight">
           {params.cityName}, {weather.sys.country}
         </h1>
-        <div>Fav button</div>
+        <div>
+          <FavoriteButton data={{ ...weather, name: params.cityName }} />
+        </div>
       </div>
 
       <div className="grid gap-6">
