@@ -10,6 +10,7 @@ import CurrentWeather from "@/ui/CurrentWeather";
 import HourlyTemperature from "@/ui/HourlyTemperature";
 import WeatherDetails from "@/ui/WeatherDetails";
 import WeatherForecast from "@/ui/WeatherForecast";
+import FavoriteCities from "@/ui/FavoriteCities";
 
 export default function Dashboard() {
   const {
@@ -99,6 +100,7 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-4">
+      <FavoriteCities />
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold tracking-tight">My Location</h1>
         <Button
